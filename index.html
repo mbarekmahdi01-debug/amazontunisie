@@ -1,1 +1,772 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>AmazonTunisie | التسوق في تونس</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= TOP NAVBAR ================= -->
+
+<header class="top-header">
+
+    <div class="header-container">
+
+        <a href="#" class="logo">
+            <span class="logo-amazon">Amazon</span>
+            <span class="logo-tunisie">Tunisie</span>
+        </a>
+
+        <div class="location">
+            <span class="location-icon">📍</span>
+            <div>
+                <small>التوصيل إلى</small>
+                <strong>تونس</strong>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <select id="categorySelect">
+                <option value="all">كل الأقسام</option>
+                <option value="phones">الهواتف</option>
+                <option value="computers">الحواسيب</option>
+                <option value="electronics">الإلكترونيات</option>
+                <option value="cameras">الكاميرات</option>
+                <option value="fashion">الملابس</option>
+            </select>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="ابحث عن منتج..."
+            >
+
+            <button id="searchBtn">🔍</button>
+        </div>
+
+        <div class="header-actions">
+
+            <a href="#" class="account">
+                <small>مرحبا بك</small>
+                <strong>حسابي 👤</strong>
+            </a>
+
+            <a href="#" class="orders">
+                <small>تتبع</small>
+                <strong>طلباتي</strong>
+            </a>
+
+            <a href="#" class="cart">
+                🛒
+                <span id="cartCount">0</span>
+                <strong>السلة</strong>
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<nav class="categories-bar">
+
+    <div class="categories-container">
+
+        <a href="#" class="category active">الرئيسية</a>
+        <a href="#" class="category" data-category="phones">الهواتف</a>
+        <a href="#" class="category" data-category="computers">الحواسيب</a>
+        <a href="#" class="category" data-category="electronics">الإلكترونيات</a>
+        <a href="#" class="category" data-category="cameras">الكاميرات</a>
+        <a href="#" class="category" data-category="fashion">الملابس</a>
+        <a href="#" class="category">الأجهزة المنزلية</a>
+        <a href="#" class="category">العروض</a>
+        <a href="#" class="category">الأكثر مبيعاً</a>
+
+    </div>
+
+</nav>
+
+
+<main>
+
+
+<!-- ================= SPONSORED ================= -->
+
+<section class="sponsored-wrapper">
+
+    <div class="sponsored-box">
+
+        <div class="sponsored-content">
+
+            <span class="sponsored-label">مموّل</span>
+
+            <div class="sponsored-text">
+                <h2>أفضل العروض في انتظارك 🔥</h2>
+                <p>
+                    اكتشف منتجات مميزة بأسعار خاصة لفترة محدودة
+                </p>
+
+                <button class="primary-btn">
+                    اكتشف العرض
+                </button>
+            </div>
+
+            <div class="sponsored-product">
+                <div class="fake-phone">
+                    📱
+                </div>
+                <span>هاتف ذكي جديد</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MAIN LAYOUT ================= -->
+
+<section class="main-layout">
+
+
+    <!-- ========== SIDEBAR ========== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-title">
+            <span>☰</span>
+            <h2>الأقسام</h2>
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="#" data-category="phones">
+                    <span>📱</span>
+                    الهواتف
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-category="computers">
+                    <span>💻</span>
+                    الحواسيب
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-category="electronics">
+                    <span>🎧</span>
+                    الإلكترونيات
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-category="cameras">
+                    <span>📷</span>
+                    الكاميرات
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-category="fashion">
+                    <span>👕</span>
+                    الملابس
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-category="home">
+                    <span>🏠</span>
+                    المنزل
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-category="gaming">
+                    <span>🎮</span>
+                    الألعاب
+                </a>
+            </li>
+
+            <li>
+                <a href="#" data-category="beauty">
+                    <span>💄</span>
+                    الجمال والعناية
+                </a>
+            </li>
+
+        </ul>
+
+
+        <div class="sidebar-offer">
+
+            <span>🚚</span>
+
+            <div>
+                <strong>توصيل سريع</strong>
+                <p>إلى كامل أنحاء تونس</p>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ========== CONTENT ========== -->
+
+    <div class="content-area">
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-overlay">
+
+                <div class="hero-text">
+
+                    <span class="hero-small">
+                        🇹🇳 AmazonTunisie
+                    </span>
+
+                    <h1>
+                        التسوق أسهل<br>
+                        في كامل تونس
+                    </h1>
+
+                    <p>
+                        منتجات متنوعة، أسعار مناسبة
+                        وتوصيل سريع إلى باب منزلك.
+                    </p>
+
+                    <div class="hero-features">
+
+                        <span>🚚 توصيل كامل تونس</span>
+                        <span>📦 توصيل سريع</span>
+                        <span>💵 الدفع عند الاستلام</span>
+
+                    </div>
+
+                    <button class="hero-btn">
+                        تسوق الآن
+                    </button>
+
+                </div>
+
+
+                <div class="tunisia-visual">
+
+                    <div class="map-circle">
+
+                        <div class="tunisia-shape">
+                            🇹🇳
+                        </div>
+
+                    </div>
+
+                    <div class="delivery-line"></div>
+
+                    <div class="delivery-box">
+                        🚚
+                        <span>توصيل إلى كامل تونس</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK CARDS -->
+
+        <section class="quick-cards">
+
+            <div class="quick-card">
+                <div class="quick-icon">🚚</div>
+                <div>
+                    <h3>التوصيل</h3>
+                    <p>إلى كامل تونس</p>
+                </div>
+            </div>
+
+            <div class="quick-card">
+                <div class="quick-icon">💳</div>
+                <div>
+                    <h3>دفع آمن</h3>
+                    <p>خيارات دفع متعددة</p>
+                </div>
+            </div>
+
+            <div class="quick-card">
+                <div class="quick-icon">↩️</div>
+                <div>
+                    <h3>إرجاع سهل</h3>
+                    <p>خدمة ما بعد البيع</p>
+                </div>
+            </div>
+
+            <div class="quick-card">
+                <div class="quick-icon">🛡️</div>
+                <div>
+                    <h3>تسوق بثقة</h3>
+                    <p>منتجات موثوقة</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCTS HEADER -->
+
+        <section class="products-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">مختاراتنا</span>
+                    <h2 id="productsTitle">منتجات مميزة</h2>
+                </div>
+
+                <a href="#" id="viewAll">
+                    عرض الكل ←
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCTS -->
+
+            <div class="products-grid" id="productsGrid">
+
+
+                <!-- PRODUCT 1 -->
+
+                <article class="product-card" data-category="phones">
+
+                    <div class="product-image">
+
+                        <span class="discount">
+                            -20%
+                        </span>
+
+                        <button class="favorite">
+                            ♡
+                        </button>
+
+                        <div class="product-emoji">
+                            📱
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            الهواتف
+                        </span>
+
+                        <h3>
+                            هاتف ذكي Pro Max
+                        </h3>
+
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                            <span>(128)</span>
+                        </div>
+
+                        <div class="price">
+                            <strong>1,899</strong>
+                            <span>د.ت</span>
+                        </div>
+
+                        <div class="old-price">
+                            2,299 د.ت
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product="هاتف ذكي Pro Max"
+                        >
+                            🛒 أضف إلى السلة
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 2 -->
+
+                <article class="product-card" data-category="computers">
+
+                    <div class="product-image">
+
+                        <span class="discount">
+                            -15%
+                        </span>
+
+                        <button class="favorite">
+                            ♡
+                        </button>
+
+                        <div class="product-emoji">
+                            💻
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            الحواسيب
+                        </span>
+
+                        <h3>
+                            حاسوب محمول Ultra
+                        </h3>
+
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                            <span>(94)</span>
+                        </div>
+
+                        <div class="price">
+                            <strong>2,499</strong>
+                            <span>د.ت</span>
+                        </div>
+
+                        <div class="old-price">
+                            2,899 د.ت
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product="حاسوب محمول Ultra"
+                        >
+                            🛒 أضف إلى السلة
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 3 -->
+
+                <article class="product-card" data-category="cameras">
+
+                    <div class="product-image">
+
+                        <span class="discount">
+                            -12%
+                        </span>
+
+                        <button class="favorite">
+                            ♡
+                        </button>
+
+                        <div class="product-emoji">
+                            📷
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            الكاميرات
+                        </span>
+
+                        <h3>
+                            كاميرا رقمية احترافية
+                        </h3>
+
+                        <div class="rating">
+                            ⭐⭐⭐⭐☆
+                            <span>(67)</span>
+                        </div>
+
+                        <div class="price">
+                            <strong>1,349</strong>
+                            <span>د.ت</span>
+                        </div>
+
+                        <div class="old-price">
+                            1,549 د.ت
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product="كاميرا رقمية احترافية"
+                        >
+                            🛒 أضف إلى السلة
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 4 -->
+
+                <article class="product-card" data-category="electronics">
+
+                    <div class="product-image">
+
+                        <span class="discount">
+                            -25%
+                        </span>
+
+                        <button class="favorite">
+                            ♡
+                        </button>
+
+                        <div class="product-emoji">
+                            🎧
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            الإلكترونيات
+                        </span>
+
+                        <h3>
+                            سماعات لاسلكية Pro
+                        </h3>
+
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                            <span>(215)</span>
+                        </div>
+
+                        <div class="price">
+                            <strong>189</strong>
+                            <span>د.ت</span>
+                        </div>
+
+                        <div class="old-price">
+                            249 د.ت
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product="سماعات لاسلكية Pro"
+                        >
+                            🛒 أضف إلى السلة
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 5 -->
+
+                <article class="product-card" data-category="fashion">
+
+                    <div class="product-image">
+
+                        <span class="discount">
+                            -30%
+                        </span>
+
+                        <button class="favorite">
+                            ♡
+                        </button>
+
+                        <div class="product-emoji">
+                            👟
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            الملابس
+                        </span>
+
+                        <h3>
+                            حذاء رياضي Premium
+                        </h3>
+
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                            <span>(83)</span>
+                        </div>
+
+                        <div class="price">
+                            <strong>159</strong>
+                            <span>د.ت</span>
+                        </div>
+
+                        <div class="old-price">
+                            229 د.ت
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product="حذاء رياضي Premium"
+                        >
+                            🛒 أضف إلى السلة
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 6 -->
+
+                <article class="product-card" data-category="electronics">
+
+                    <div class="product-image">
+
+                        <span class="discount">
+                            -18%
+                        </span>
+
+                        <button class="favorite">
+                            ♡
+                        </button>
+
+                        <div class="product-emoji">
+                            ⌚
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            الإلكترونيات
+                        </span>
+
+                        <h3>
+                            ساعة ذكية Smart Watch
+                        </h3>
+
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                            <span>(151)</span>
+                        </div>
+
+                        <div class="price">
+                            <strong>229</strong>
+                            <span>د.ت</span>
+                        </div>
+
+                        <div class="old-price">
+                            279 د.ت
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product="ساعة ذكية Smart Watch"
+                        >
+                            🛒 أضف إلى السلة
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div class="footer-column">
+
+            <h3>AmazonTunisie</h3>
+
+            <p>
+                منصتك للتسوق الإلكتروني في تونس.
+                اكتشف آلاف المنتجات والعروض.
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>خدمة العملاء</h3>
+
+            <a href="#">مركز المساعدة</a>
+            <a href="#">سياسة الإرجاع</a>
+            <a href="#">الشحن والتوصيل</a>
+            <a href="#">اتصل بنا</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>معلومات</h3>
+
+            <a href="#">من نحن</a>
+            <a href="#">شروط الاستخدام</a>
+            <a href="#">الخصوصية</a>
+            <a href="#">البيع معنا</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>تابعنا</h3>
+
+            <div class="socials">
+                <span>📘</span>
+                <span>📸</span>
+                <span>🎵</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 AmazonTunisie — جميع الحقوق محفوظة
+    </div>
+
+</footer>
+
+
+<div id="toast" class="toast">
+    تمت إضافة المنتج إلى السلة 🛒
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
